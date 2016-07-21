@@ -56,8 +56,8 @@
                     <RowDefinition Height = "*" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width = "2*" />
                     <ColumnDefinition Width = "*" />
+                    <ColumnDefinition Width = "2*" />
                 </Grid.ColumnDefinitions>
                 <TextBlock Text="Border color:" Grid.Column = "0" Grid.Row = "0" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Center"/>
                 <xctk:ColorPicker Name="BorderColor" Grid.Column = "1" Grid.Row = "0" SelectedColorChanged="BorderColor_SelectedColorChanged" Margin="10"></xctk:ColorPicker>
@@ -122,6 +122,10 @@
 
 
         </Grid>
+
+        <Button Name="allBordersButton" Grid.Column="2" Grid.Row="0" Click="allBordersButton_Click" Margin="10" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            <TextBlock Text="Turn all Borders On/Off"  TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Center" Margin="10px"/>
+        </Button>
 
     </Grid>
 

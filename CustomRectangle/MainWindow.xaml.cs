@@ -20,7 +20,7 @@ namespace CustomRectangle
     /// </summary>
     public partial class MainWindow : Window
     {
-        private int borderThick = 2;
+        private double borderThick = 2;
         private LinearGradientBrush linearBrush = new LinearGradientBrush();
         GradientStop topGS = new GradientStop();
         GradientStop bottomGS = new GradientStop();
@@ -84,8 +84,8 @@ namespace CustomRectangle
         private void textButton_Click(object sender, RoutedEventArgs e)
         {
             //set border thickness
-            int temp = 0;
-            if(int.TryParse(thickText.Text, out temp)){
+            double temp = 0.0;
+            if(double.TryParse(thickText.Text, out temp)){
                 borderThick = temp;
                 BorderCtrl.BorderThickness = new Thickness(borderThick);
             }
@@ -142,6 +142,27 @@ namespace CustomRectangle
                 bottomGS.Color = (Color)FillColor1.SelectedColor;
             }
             BorderCtrl.Background = linearBrush;
+        }
+
+        private void allBordersButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (showLeftBorder || showRightBorder || showTopBorder || showBottomBorder)
+            {
+                showLeftBorder = false;
+                showRightBorder = false;
+                showTopBorder = false;
+                showBottomBorder = false;
+            }
+            else
+            {
+                showLeftBorder = true;
+                showRightBorder = true;
+                showTopBorder = true;
+                showBottomBorder = true;
+            }
+            BorderCtrl.BorderThickness = new Thickness(showLeftBorder ? borderThick : 0,
+                showTopBorder ? borderThick : 0, showRightBorder ? borderThick : 0, showBottomBorder ? borderThick : 0);
+
         }
     }
 }

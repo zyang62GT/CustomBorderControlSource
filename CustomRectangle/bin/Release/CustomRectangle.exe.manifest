@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CustomRectangle.exe" size="16360">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CustomRectangle.exe" size="17896">
       <assemblyIdentity name="CustomRectangle" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>4ILqZgIDoiwNhIpnuLM9XwFgsfDuIGuDZpDkfjSsW9U=</dsig:DigestValue>
+        <dsig:DigestValue>nJHpDWaYJLOkxbeiApdj5wPcGf1CB6mSYJhZch1rzhA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
